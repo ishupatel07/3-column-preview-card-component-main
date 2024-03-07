@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(1, 400px);
+    min-height: 60vh;
+
+
+}
+
+.card1 {
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.cars {
+    height: 20%;
+}
+
+.content h1 {
+
+    padding-left: 35px;
+    color: var(--Very-light-gray);
+}
+
+.content p {
+    padding: 25px 63px 0 35px;
+    color: var(--Very-light-gray);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+button {
+    margin-top: 70px;
+    margin-right: 0px;
+    margin-left: 25px;
+    width: 130px;
+    height: 40px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    border: none;
+}
+
+.card1 button {
+    color: var(--Bright-orange);
+}
+
+.card2 button {
+    color: var(--Dark-cyan);
+}
+
+.card3 button {
+    color: var(--Very-dark-cyan);
+}
+
+.card1 button:hover {
+    color: var(--Transparent-white);
+    background-color: var(--Bright-orange);
+    border: 2px solid var(--Very-light-gray);
+}
+
+.card2 button:hover {
+    color: var(--Transparent-white);
+    background-color: var(--Dark-cyan);
+    border: 2px solid var(--Very-light-gray);
+}
+
+.card3 button:hover {
+    color: var(--Transparent-white);
+    background-color: var(--Very-dark-cyan);
+    border: 2px solid var(--Very-light-gray);
+
+}
+
+
+.cars img {
+    width: 35%;
+    padding: 30px 0 0 35px;
+}
+
+.card2 {
+    background-color: var(--Dark-cyan);
+}
+
+.card3 {
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+@media (max-width: 800px) {
+    body {
+        margin-top: 40%;
+        margin-bottom: 40%;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-height: 100vh;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 250px);
+        grid-template-rows: repeat(3, 320px);
+
+    }
+
+    .card1 {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+    }
+
+    .card3 {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 0;
+    }
+
+    .cars img {
+        width: 35%;
+        padding: 30px 0 0 35px;
+    }
+
+    .content h1 {
+        padding-top: 17px;
+        padding-left: 35px;
+        color: var(--Very-light-gray);
+    }
+
+    .content p {
+
+        padding: 14px 34px 0 35px;
+        color: var(--Very-light-gray);
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    button {
+        margin-top: 25px;
+    }
+
+}
